@@ -1,0 +1,1 @@
+pytorch-quantization==2.1.3

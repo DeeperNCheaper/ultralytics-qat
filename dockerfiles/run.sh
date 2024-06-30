@@ -1,0 +1,2 @@
+# docker run -v /home/marojeon/Work/DnC/yolov8-qat:/usr/src/yolov8-qat --name=yolov8-qat --rm -it  --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 --gpus all yolov8-qat
+docker run  --name=yolov8-qat --rm -it  --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 --gpus all yolov8-qat
