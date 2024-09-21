@@ -8,12 +8,12 @@ keywords: YOLOv8, ClearML, MLOps, Ultralytics, machine learning, object detectio
 
 MLOps bridges the gap between creating and deploying machine learning models in real-world settings. It focuses on efficient deployment, scalability, and ongoing management to ensure models perform well in practical applications.
 
-[Ultralytics YOLOv8](https://ultralytics.com) effortlessly integrates with ClearML, streamlining and enhancing your object detection model's training and management. This guide will walk you through the integration process, detailing how to set up ClearML, manage experiments, automate model management, and collaborate effectively.
+[Ultralytics YOLOv8](https://www.ultralytics.com/) effortlessly integrates with ClearML, streamlining and enhancing your object detection model's training and management. This guide will walk you through the integration process, detailing how to set up ClearML, manage experiments, automate model management, and collaborate effectively.
 
 ## ClearML
 
 <p align="center">
-  <img width="100%" src="https://clear.ml/wp-content/uploads/2023/06/DataOps@2x-1.png" alt="ClearML Overview">
+  <img width="100%" src="https://github.com/ultralytics/docs/releases/download/0/clearml-overview.avif" alt="ClearML Overview">
 </p>
 
 [ClearML](https://clear.ml/) is an innovative open-source MLOps platform that is skillfully designed to automate, monitor, and orchestrate machine learning workflows. Its key features include automated logging of all training and inference data for full experiment reproducibility, an intuitive web UI for easy data visualization and analysis, advanced hyperparameter optimization algorithms, and robust model management for efficient deployment across various platforms.
@@ -26,7 +26,7 @@ You can bring automation and efficiency to your machine learning workflow by imp
 
 To install the required packages, run:
 
-!!! Tip "Installation"
+!!! tip "Installation"
 
     === "CLI"
 
@@ -43,7 +43,7 @@ Once you have installed the necessary packages, the next step is to initialize a
 
 Begin by initializing the ClearML SDK in your environment. The 'clearml-init' command starts the setup process and prompts you for the necessary credentials.
 
-!!! Tip "Initial SDK Setup"
+!!! tip "Initial SDK Setup"
 
     === "CLI"
 
@@ -58,7 +58,7 @@ After executing this command, visit the [ClearML Settings page](https://app.clea
 
 Before diving into the usage instructions, be sure to check out the range of [YOLOv8 models offered by Ultralytics](../models/index.md). This will help you choose the most appropriate model for your project requirements.
 
-!!! Example "Usage"
+!!! example "Usage"
 
     === "Python"
 
@@ -175,7 +175,7 @@ This setup is applicable to cloud VMs, local GPUs, or laptops. ClearML Autoscale
 ClearML's user-friendly interface allows easy cloning, editing, and enqueuing of tasks. Users can clone an existing experiment, adjust parameters or other details through the UI, and enqueue the task for execution. This streamlined process ensures that the ClearML Agent executing the task uses updated configurations, making it ideal for iterative experimentation and model fine-tuning.
 
 <p align="center"><br>
-  <img width="100%" src="https://clear.ml/docs/latest/assets/images/integrations_yolov5-2483adea91df4d41bfdf1a37d28864d4.gif" alt="Cloning, Editing, and Enqueuing with ClearML">
+  <img width="100%" src="https://github.com/ultralytics/docs/releases/download/0/cloning-editing-enqueuing-clearml.avif" alt="Cloning, Editing, and Enqueuing with ClearML">
 </p>
 
 ## Summary
@@ -185,3 +185,62 @@ This guide has led you through the process of integrating ClearML with Ultralyti
 For further details on usage, visit [ClearML's official documentation](https://clear.ml/docs/latest/docs/integrations/yolov8/).
 
 Additionally, explore more integrations and capabilities of Ultralytics by visiting the [Ultralytics integration guide page](../integrations/index.md), which is a treasure trove of resources and insights.
+
+## FAQ
+
+### What is the process for integrating Ultralytics YOLOv8 with ClearML?
+
+Integrating Ultralytics YOLOv8 with ClearML involves a series of steps to streamline your MLOps workflow. First, install the necessary packages:
+
+```bash
+pip install ultralytics clearml
+```
+
+Next, initialize the ClearML SDK in your environment using:
+
+```bash
+clearml-init
+```
+
+You then configure ClearML with your credentials from the [ClearML Settings page](https://app.clear.ml/settings/workspace-configuration). Detailed instructions on the entire setup process, including model selection and training configurations, can be found in our [YOLOv8 Model Training guide](../modes/train.md).
+
+### Why should I use ClearML with Ultralytics YOLOv8 for my machine learning projects?
+
+Using ClearML with Ultralytics YOLOv8 enhances your machine learning projects by automating experiment tracking, streamlining workflows, and enabling robust model management. ClearML offers real-time metrics tracking, resource utilization monitoring, and a user-friendly interface for comparing experiments. These features help optimize your model's performance and make the development process more efficient. Learn more about the benefits and procedures in our [MLOps Integration guide](../modes/train.md).
+
+### How do I troubleshoot common issues during YOLOv8 and ClearML integration?
+
+If you encounter issues during the integration of YOLOv8 with ClearML, consult our [Common Issues guide](../guides/yolo-common-issues.md) for solutions and tips. Typical problems might involve package installation errors, credential setup, or configuration issues. This guide provides step-by-step troubleshooting instructions to resolve these common issues efficiently.
+
+### How do I set up the ClearML task for YOLOv8 model training?
+
+Setting up a ClearML task for YOLOv8 training involves initializing a task, selecting the model variant, loading the model, setting up training arguments, and finally, starting the model training. Here's a simplified example:
+
+```python
+from clearml import Task
+
+from ultralytics import YOLO
+
+# Step 1: Creating a ClearML Task
+task = Task.init(project_name="my_project", task_name="my_yolov8_task")
+
+# Step 2: Selecting the YOLOv8 Model
+model_variant = "yolov8n"
+task.set_parameter("model_variant", model_variant)
+
+# Step 3: Loading the YOLOv8 Model
+model = YOLO(f"{model_variant}.pt")
+
+# Step 4: Setting Up Training Arguments
+args = dict(data="coco8.yaml", epochs=16)
+task.connect(args)
+
+# Step 5: Initiating Model Training
+results = model.train(**args)
+```
+
+Refer to our [Usage guide](#usage) for a detailed breakdown of these steps.
+
+### Where can I view the results of my YOLOv8 training in ClearML?
+
+After running your YOLOv8 training script with ClearML, you can view the results on the ClearML results page. The output will include a URL link to the ClearML dashboard, where you can track metrics, compare experiments, and monitor resource usage. For more details on how to view and interpret the results, check our section on [Viewing the ClearML Results Page](#viewing-the-clearml-results-page).

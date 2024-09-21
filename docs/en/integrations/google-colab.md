@@ -22,7 +22,7 @@ Training YOLOv8 models on Google Colab is pretty straightforward. Thanks to the 
 
 Sign in to your Google account and run the notebook's cells to train your model.
 
-![Training YOLOv8 Using Google Colab](https://github.com/ultralytics/ultralytics/assets/25847604/71779530-619e-4518-aced-5d56e1e8eab3)
+![Training YOLOv8 Using Google Colab](https://github.com/ultralytics/docs/releases/download/0/training-yolov8-using-google-colab.avif)
 
 Learn how to train a YOLOv8 model with custom data on YouTube with Nicolai. Check out the guide below.
 
@@ -67,7 +67,7 @@ Now, let's look at some of the standout features that make Google Colab a go-to 
 
 - **Hardware Resources:** Users also switch between different hardware options by modifying the runtime settings as shown below. Google Colab provides access to advanced hardware like Tesla K80 GPUs and TPUs, which are specialized circuits designed specifically for machine learning tasks.
 
-![Runtime Settings](https://github.com/ultralytics/ultralytics/assets/25847604/89a71a81-2784-4182-ad53-f024807d1dcc)
+![Runtime Settings](https://github.com/ultralytics/docs/releases/download/0/runtime-settings.avif)
 
 - **Collaboration:** Google Colab makes collaborating and working with other developers easy. You can easily share your notebooks with others and perform edits in real-time.
 
@@ -108,3 +108,44 @@ We've discussed how you can easily experiment with Ultralytics YOLOv8 models on 
 For more details, visit [Google Colab's FAQ page](https://research.google.com/colaboratory/intl/en-GB/faq.html).
 
 Interested in more YOLOv8 integrations? Visit the [Ultralytics integration guide page](index.md) to explore additional tools and capabilities that can improve your machine-learning projects.
+
+## FAQ
+
+### How do I start training Ultralytics YOLOv8 models on Google Colab?
+
+To start training Ultralytics YOLOv8 models on Google Colab, sign in to your Google account, then access the [Google Colab YOLOv8 Notebook](https://colab.research.google.com/github/ultralytics/ultralytics/blob/main/examples/tutorial.ipynb). This notebook guides you through the setup and training process. After launching the notebook, run the cells step-by-step to train your model. For a full guide, refer to the [YOLOv8 Model Training guide](../modes/train.md).
+
+### What are the advantages of using Google Colab for training YOLOv8 models?
+
+Google Colab offers several advantages for training YOLOv8 models:
+
+- **Zero Setup:** No initial environment setup is required; just log in and start coding.
+- **Free GPU Access:** Use powerful GPUs or TPUs without the need for expensive hardware.
+- **Integration with Google Drive:** Easily store and access datasets and models.
+- **Collaboration:** Share notebooks with others and collaborate in real-time.
+
+For more information on why you should use Google Colab, explore the [training guide](../modes/train.md) and visit the [Google Colab page](https://colab.google/notebooks/).
+
+### How can I handle Google Colab session timeouts during YOLOv8 training?
+
+Google Colab sessions timeout due to inactivity, especially for free users. To handle this:
+
+1. **Stay Active:** Regularly interact with your Colab notebook.
+2. **Save Progress:** Continuously save your work to Google Drive or GitHub.
+3. **Colab Pro:** Consider upgrading to Google Colab Pro for longer session durations.
+
+For more tips on managing your Colab session, visit the [Google Colab FAQ page](https://research.google.com/colaboratory/intl/en-GB/faq.html).
+
+### Can I use custom datasets for training YOLOv8 models in Google Colab?
+
+Yes, you can use custom datasets to train YOLOv8 models in Google Colab. Upload your dataset to Google Drive and load it directly into your Colab notebook. You can follow Nicolai's YouTube guide, [How to Train YOLOv8 Models on Your Custom Dataset](https://www.youtube.com/watch?v=LNwODJXcvt4), or refer to the [Custom Dataset Training guide](https://www.ultralytics.com/blog/training-custom-datasets-with-ultralytics-yolov8-in-google-colab) for detailed steps.
+
+### What should I do if my Google Colab training session is interrupted?
+
+If your Google Colab training session is interrupted:
+
+1. **Save Regularly:** Avoid losing unsaved progress by regularly saving your work to Google Drive or GitHub.
+2. **Resume Training:** Restart your session and re-run the cells from where the interruption occurred.
+3. **Use Checkpoints:** Incorporate checkpointing in your training script to save progress periodically.
+
+These practices help ensure your progress is secure. Learn more about session management on [Google Colab's FAQ page](https://research.google.com/colaboratory/intl/en-GB/faq.html).

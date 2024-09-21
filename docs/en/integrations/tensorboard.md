@@ -6,14 +6,14 @@ keywords: YOLOv8, TensorBoard, model training, visualization, machine learning, 
 
 # Gain Visual Insights with YOLOv8's Integration with TensorBoard
 
-Understanding and fine-tuning computer vision models like [Ultralytics' YOLOv8](https://ultralytics.com) becomes more straightforward when you take a closer look at their training processes. Model training visualization helps with getting insights into the model's learning patterns, performance metrics, and overall behavior. YOLOv8's integration with TensorBoard makes this process of visualization and analysis easier and enables more efficient and informed adjustments to the model.
+Understanding and fine-tuning computer vision models like [Ultralytics' YOLOv8](https://www.ultralytics.com/) becomes more straightforward when you take a closer look at their training processes. Model training visualization helps with getting insights into the model's learning patterns, performance metrics, and overall behavior. YOLOv8's integration with TensorBoard makes this process of visualization and analysis easier and enables more efficient and informed adjustments to the model.
 
 This guide covers how to use TensorBoard with YOLOv8. You'll learn about various visualizations, from tracking metrics to analyzing model graphs. These tools will help you understand your YOLOv8 model's performance better.
 
 ## TensorBoard
 
 <p align="center">
-  <img width="640" src="https://www.tensorflow.org/static/tensorboard/images/tensorboard.gif" alt="Tensorboard Overview">
+  <img width="640" src="https://github.com/ultralytics/docs/releases/download/0/tensorboard-overview.avif" alt="Tensorboard Overview">
 </p>
 
 [TensorBoard](https://www.tensorflow.org/tensorboard), TensorFlow's visualization toolkit, is essential for machine learning experimentation. TensorBoard features a range of visualization tools, crucial for monitoring machine learning models. These tools include tracking key metrics like loss and accuracy, visualizing model graphs, and viewing histograms of weights and biases over time. It also provides capabilities for projecting embeddings to lower-dimensional spaces and displaying multimedia data.
@@ -26,7 +26,7 @@ Using TensorBoard while training YOLOv8 models is straightforward and offers sig
 
 To install the required package, run:
 
-!!! Tip "Installation"
+!!! tip "Installation"
 
     === "CLI"
 
@@ -43,7 +43,7 @@ For detailed instructions and best practices related to the installation process
 
 When using Google Colab, it's important to set up TensorBoard before starting your training code:
 
-!!! Example "Configure TensorBoard for Google Colab"
+!!! example "Configure TensorBoard for Google Colab"
 
     === "Python"
 
@@ -56,23 +56,23 @@ When using Google Colab, it's important to set up TensorBoard before starting yo
 
 Before diving into the usage instructions, be sure to check out the range of [YOLOv8 models offered by Ultralytics](../models/index.md). This will help you choose the most appropriate model for your project requirements.
 
-!!! Example "Usage"
+!!! example "Usage"
 
     === "Python"
 
         ```python
-       from ultralytics import YOLO
+        from ultralytics import YOLO
 
-       # Load a pre-trained model
-       model = YOLO('yolov8n.pt')
+        # Load a pre-trained model
+        model = YOLO("yolov8n.pt")
 
-       # Train the model
-       results = model.train(data='coco8.yaml', epochs=100, imgsz=640)
-       ```
+        # Train the model
+        results = model.train(data="coco8.yaml", epochs=100, imgsz=640)
+        ```
 
 Upon running the usage code snippet above, you can expect the following output:
 
-```plaintext
+```bash
 TensorBoard: Start with 'tensorboard --logdir path_to_your_tensorboard_logs', view at http://localhost:6006/
 ```
 
@@ -88,7 +88,7 @@ Now, let's focus on understanding the various features and components of TensorB
 
 The Time Series feature in the TensorBoard offers a dynamic and detailed perspective of various training metrics over time for YOLOv8 models. It focuses on the progression and trends of metrics across training epochs. Here's an example of what you can expect to see.
 
-![image](https://github.com/ultralytics/ultralytics/assets/25847604/20b3e038-0356-465e-a37e-1ea232c68354)
+![image](https://github.com/ultralytics/docs/releases/download/0/time-series-tensorboard-yolov8.avif)
 
 #### Key Features of Time Series in TensorBoard
 
@@ -108,7 +108,7 @@ The Time Series section is essential for a thorough analysis of the YOLOv8 model
 
 Scalars in the TensorBoard are crucial for plotting and analyzing simple metrics like loss and accuracy during the training of YOLOv8 models. They offer a clear and concise view of how these metrics evolve with each training epoch, providing insights into the model's learning effectiveness and stability. Here's an example of what you can expect to see.
 
-![image](https://github.com/ultralytics/ultralytics/assets/25847604/f9228193-13e9-4768-9edf-8fa15ecd24fa)
+![image](https://github.com/ultralytics/docs/releases/download/0/scalars-metrics-tensorboard.avif)
 
 #### Key Features of Scalars in TensorBoard
 
@@ -140,7 +140,7 @@ While both Scalars and Time Series in TensorBoard are used for tracking metrics,
 
 The Graphs section of the TensorBoard visualizes the computational graph of the YOLOv8 model, showing how operations and data flow within the model. It's a powerful tool for understanding the model's structure, ensuring that all layers are connected correctly, and for identifying any potential bottlenecks in data flow. Here's an example of what you can expect to see.
 
-![image](https://github.com/ultralytics/ultralytics/assets/25847604/039028e0-4ab3-4170-bfa8-f93ce483f615)
+![image](https://github.com/ultralytics/docs/releases/download/0/tensorboard-yolov8-computational-graph.avif)
 
 Graphs are particularly useful for debugging the model, especially in complex architectures typical in deep learning models like YOLOv8. They help in verifying layer connections and the overall design of the model.
 
@@ -151,3 +151,63 @@ This guide aims to help you use TensorBoard with YOLOv8 for visualization and an
 For a more detailed exploration of these features and effective utilization strategies, you can refer to TensorFlow's official [TensorBoard documentation](https://www.tensorflow.org/tensorboard/get_started) and their [GitHub repository](https://github.com/tensorflow/tensorboard).
 
 Want to learn more about the various integrations of Ultralytics? Check out the [Ultralytics integrations guide page](../integrations/index.md) to see what other exciting capabilities are waiting to be discovered!
+
+## FAQ
+
+### What benefits does using TensorBoard with YOLOv8 offer?
+
+Using TensorBoard with YOLOv8 provides several visualization tools essential for efficient model training:
+
+- **Real-Time Metrics Tracking:** Track key metrics such as loss, accuracy, precision, and recall live.
+- **Model Graph Visualization:** Understand and debug the model architecture by visualizing computational graphs.
+- **Embedding Visualization:** Project embeddings to lower-dimensional spaces for better insight.
+
+These tools enable you to make informed adjustments to enhance your YOLOv8 model's performance. For more details on TensorBoard features, check out the TensorFlow [TensorBoard guide](https://www.tensorflow.org/tensorboard/get_started).
+
+### How can I monitor training metrics using TensorBoard when training a YOLOv8 model?
+
+To monitor training metrics while training a YOLOv8 model with TensorBoard, follow these steps:
+
+1. **Install TensorBoard and YOLOv8:** Run `pip install ultralytics` which includes TensorBoard.
+2. **Configure TensorBoard Logging:** During the training process, YOLOv8 logs metrics to a specified log directory.
+3. **Start TensorBoard:** Launch TensorBoard using the command `tensorboard --logdir path/to/your/tensorboard/logs`.
+
+The TensorBoard dashboard, accessible via [http://localhost:6006/](http://localhost:6006/), provides real-time insights into various training metrics. For a deeper dive into training configurations, visit our [YOLOv8 Configuration guide](../usage/cfg.md).
+
+### What kind of metrics can I visualize with TensorBoard when training YOLOv8 models?
+
+When training YOLOv8 models, TensorBoard allows you to visualize an array of important metrics including:
+
+- **Loss (Training and Validation):** Indicates how well the model is performing during training and validation.
+- **Accuracy/Precision/Recall:** Key performance metrics to evaluate detection accuracy.
+- **Learning Rate:** Track learning rate changes to understand its impact on training dynamics.
+- **mAP (mean Average Precision):** For a comprehensive evaluation of object detection accuracy at various IoU thresholds.
+
+These visualizations are essential for tracking model performance and making necessary optimizations. For more information on these metrics, refer to our [Performance Metrics guide](../guides/yolo-performance-metrics.md).
+
+### Can I use TensorBoard in a Google Colab environment for training YOLOv8?
+
+Yes, you can use TensorBoard in a Google Colab environment to train YOLOv8 models. Here's a quick setup:
+
+!!! example "Configure TensorBoard for Google Colab"
+
+    === "Python"
+
+        ```ipython
+        %load_ext tensorboard
+        %tensorboard --logdir path/to/runs
+        ```
+
+        Then, run the YOLOv8 training script:
+
+        ```python
+        from ultralytics import YOLO
+
+        # Load a pre-trained model
+        model = YOLO("yolov8n.pt")
+
+        # Train the model
+        results = model.train(data="coco8.yaml", epochs=100, imgsz=640)
+        ```
+
+TensorBoard will visualize the training progress within Colab, providing real-time insights into metrics like loss and accuracy. For additional details on configuring YOLOv8 training, see our detailed [YOLOv8 Installation guide](../quickstart.md).

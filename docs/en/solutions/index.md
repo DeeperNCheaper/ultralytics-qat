@@ -8,7 +8,7 @@ keywords: Ultralytics, YOLOv8, object counting, object blurring, security system
 
 Ultralytics Solutions provide cutting-edge applications of YOLO models, offering real-world solutions like object counting, blurring, and security systems, enhancing efficiency and accuracy in diverse industries. Discover the power of YOLOv8 for practical, impactful implementations.
 
-![Ultralytics Solutions Thumbnail](https://github.com/RizwanMunawar/RizwanMunawar/assets/62513924/44c8b148-7a9d-43e4-b7bf-272a7ac4e636)
+![Ultralytics Solutions Thumbnail](https://github.com/ultralytics/docs/releases/download/0/ultralytics-solutions-thumbnail.avif)
 
 ## Solutions
 
@@ -28,6 +28,7 @@ Here's our curated list of Ultralytics solutions that can be used to create awes
 - [Queue Management](../guides/queue-management.md) 🚀 NEW: Implement efficient queue management systems to minimize wait times and improve productivity using YOLOv8.
 - [Parking Management](../guides/parking-management.md) 🚀 NEW: Organize and direct vehicle flow in parking areas with YOLOv8, optimizing space utilization and user experience.
 - [Analytics](../guides/analytics.md) 📊 NEW: Conduct comprehensive data analysis to discover patterns and make informed decisions, leveraging YOLOv8 for descriptive, predictive, and prescriptive analytics.
+- [Live Inference with Streamlit](../guides/streamlit-live-inference.md) 🚀 NEW: Leverage the power of YOLOv8 for real-time object detection directly through your web browser with a user-friendly Streamlit interface.
 
 ## Contribute to Our Solutions
 
@@ -36,3 +37,25 @@ We welcome contributions from the community! If you've mastered a particular asp
 To get started, please read our [Contributing Guide](../help/contributing.md) for guidelines on how to open up a Pull Request (PR) 🛠️. We look forward to your contributions!
 
 Let's work together to make the Ultralytics YOLO ecosystem more robust and versatile 🙏!
+
+## FAQ
+
+### How can I use Ultralytics YOLO for real-time object counting?
+
+Ultralytics YOLOv8 can be used for real-time object counting by leveraging its advanced object detection capabilities. You can follow our detailed guide on [Object Counting](../guides/object-counting.md) to set up YOLOv8 for live video stream analysis. Simply install YOLOv8, load your model, and process video frames to count objects dynamically.
+
+### What are the benefits of using Ultralytics YOLO for security systems?
+
+Ultralytics YOLOv8 enhances security systems by offering real-time object detection and alert mechanisms. By employing YOLOv8, you can create a security alarm system that triggers alerts when new objects are detected in the surveillance area. Learn how to set up a [Security Alarm System](../guides/security-alarm-system.md) with YOLOv8 for robust security monitoring.
+
+### How can Ultralytics YOLO improve queue management systems?
+
+Ultralytics YOLOv8 can significantly improve queue management systems by accurately counting and tracking people in queues, thus helping to reduce wait times and optimize service efficiency. Follow our detailed guide on [Queue Management](../guides/queue-management.md) to learn how to implement YOLOv8 for effective queue monitoring and analysis.
+
+### Can Ultralytics YOLO be used for workout monitoring?
+
+Yes, Ultralytics YOLOv8 can be effectively used for monitoring workouts by tracking and analyzing fitness routines in real-time. This allows for precise evaluation of exercise form and performance. Explore our guide on [Workouts Monitoring](../guides/workouts-monitoring.md) to learn how to set up an AI-powered workout monitoring system using YOLOv8.
+
+### How does Ultralytics YOLO help in creating heatmaps for data visualization?
+
+Ultralytics YOLOv8 can generate heatmaps to visualize data intensity across a given area, highlighting regions of high activity or interest. This feature is particularly useful in understanding patterns and trends in various computer vision tasks. Learn more about creating and using [Heatmaps](../guides/heatmaps.md) with YOLOv8 for comprehensive data analysis and visualization.
