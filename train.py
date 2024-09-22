@@ -60,5 +60,10 @@ if __name__ == "__main__":
     model.train(**args_dict) # model -> DetectionTrainer
     metrics = model.val()  # evaluate model performance on the validation set
     
+    # TODO
+    # ---- Use case ---- #
+    model.train(qat=True, epochs=20, lr0=0.0001) # fine tuning
+    model.export(format="onnx", graphsurgeon='qat') # onnx graph surgeon
+    
     # results = model("https://ultralytics.com/images/bus.jpg")  # predict on an image
     # path = model.export(format="onnx")  # export the model to ONNX format

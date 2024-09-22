@@ -40,6 +40,7 @@ overlap_mask: True # (bool) masks should overlap during training (segment train 
 mask_ratio: 4 # (int) mask downsample ratio (segment train only)
 # Classification
 dropout: 0.0 # (float) use dropout regularization (classify train only)
+qat: # (bool, optional) whether to add quantize / dequantize operations on the current model
 
 # Val/Test settings ----------------------------------------------------------------------------------------------------
 val: True # (bool) validate/test during training
@@ -82,6 +83,7 @@ optimize: False # (bool) TorchScript: optimize for mobile
 int8: False # (bool) CoreML/TF INT8 quantization
 dynamic: False # (bool) ONNX/TF/TensorRT: dynamic axes
 simplify: False # (bool) ONNX: simplify model using `onnxslim`
+graphsurgeon: # (str, optional) ONNX: modify model for better performance using `onnx_graphsurgeon` i.e. 'qat'
 opset: # (int, optional) ONNX: opset version
 workspace: 4 # (int) TensorRT: workspace size (GB)
 nms: False # (bool) CoreML: add NMS
