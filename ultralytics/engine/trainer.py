@@ -805,3 +805,8 @@ class BaseTrainer:
             f'{len(g[1])} weight(decay=0.0), {len(g[0])} weight(decay={decay}), {len(g[2])} bias(decay=0.0)'
         )
         return optimizer
+
+class QatTrainer(BaseTrainer):
+    super.__init__()
+    def __init__(self):
+        pass
