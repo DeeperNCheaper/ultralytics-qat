@@ -433,6 +433,13 @@ class Exporter:
             except Exception as e:
                 LOGGER.warning(f"{prefix} simplifier failure: {e}")
 
+        if self.args.graphsurgeon == 'qat':
+            try:
+                import onnx_graphsurgeon
+            
+            except:
+                pass
+                
         # Metadata
         for k, v in self.metadata.items():
             meta = model_onnx.metadata_props.add()
