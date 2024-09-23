@@ -4,7 +4,7 @@ from modelopt.torch.quantization.tensor_quant import QuantDescriptor, QUANT_DESC
 from modelopt.torch.quantization.nn.modules import _utils
 from modelopt.torch.quantization import quant_modules
 quant_modules.initialize()
-
+# TODO: ultralytics와 가장 잘 맞도록 QuantXXX 모듈을 만들 수 있도록 해야함.
 class QuantConv(torch.nn.Module, _utils.QuantMixin):
     def __init__(self,
                 in_channels,
