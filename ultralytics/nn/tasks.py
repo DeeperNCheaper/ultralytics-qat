@@ -186,7 +186,8 @@ class BaseModel(nn.Module):
         LOGGER.info(f"{dt[-1]:10.2f} {flops:10.2f} {m.np:10.0f}  {m.type}")
         if c:
             LOGGER.info(f"{sum(dt):10.2f} {'-':>10s} {'-':>10s}  Total")
-
+    def add_qdq(self):
+        return
     def fuse(self, verbose=True):
         """
         Fuse the `Conv2d()` and `BatchNorm2d()` layers of the model into a single layer, in order to improve the
